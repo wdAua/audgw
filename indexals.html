@@ -290,26 +290,24 @@
         art: "爱丽丝立绘.png",
         initialMsg: "邦邦卡邦 爱丽丝来帮忙了",
         replyMap: [
-          { keywords: ['你是谁', '叫什么', '姓名'], reply: '邦邦卡邦，我是爱丽丝呀o(^▽^)o' },
-          { keywords: ['老师'], reply: '老师很好呢' },
-          { keywords: ['游戏开发部'], reply: '我很喜欢游戏开发部呢' },
-          { keywords: ['桃'], reply: '小桃是个很好的人呢，我很喜欢她' },
-          { keywords: ['绿'], reply: '小绿很爱画画，我很喜欢她' },
-          { keywords: ['游戏', '给木'], reply: '我很喜欢玩游戏呢ヾ(＠^∇^＠)ノ' },
-          { keywords: ['柚子'], reply: '柚子姐姐也很好呢，咦 难道柚子又躲在柜子里面去了' },
-          { keywords: ['优香', '妈妈'], reply: '优香很好，我好喜欢她' },
-          { keywords: ['日奈'], reply: '喔，好久都没有见到日奈了' },
-          { keywords: ['喜欢'], reply: '我喜欢玩游戏，emmm.........其实......还有老师呀（〜^∇^)〜' },
-          { keywords: ['爱丽丝'], reply: '咦，老师叫我干什么呢' },
-          { keywords: ['游戏机'], reply: '爱丽丝的游戏机呢......唔...让我找一下.....找到了！' },
-          { keywords: ['一起玩'], reply: '好的，邦邦卡邦，老师 爱丽丝准备好了' },
-          { keywords: ['你好', 'hi'], reply: '你好啊老师，很高兴见到你' },
-          { keywords: ['傻瓜', '智障', '傻逼', 'sz', '你妈', '操'], reply: '额.....老师...对不起，可能是我惹到您了....╥﹏╥' },
-          { keywords: ['喜欢什么游戏'], reply: '爱丽丝喜欢很多游戏呢，尤其是游戏开发部开发出的，老师喜欢什么游戏呢（＾ｖ＾）' },
-          { keywords: ['开始'], reply: '好的，邦邦卡邦，勇者准备好了' },
-          { keywords: ['基沃托斯'], reply: '爱丽丝觉得....唔....基沃托斯很美好呢，爱丽丝很喜欢(≧∇≦)/' },
-          { keywords: ['key'], reply: 'key是个很好的人呢' },
-          { keywords: ['我的Au啊'], reply: '这是很帅气的人，爱丽丝超级喜欢他！Ｏ(≧∇≦)Ｏ' }
+          { keywords: ['你好', 'hi', 'hello', '您好'], reply: '你好啊 老师' },
+          { keywords: ['绿'], reply: '小绿人很好呢' },
+          { keywords: ['喜欢什么游戏', '爱玩什么', '喜欢玩什么'], reply: '我喜欢玩游戏开发部的游戏呀，老师喜欢什么游戏呢', relateFormat: '{userMsg}吗 听起来挺有趣的呢' },
+          { keyword: ['兴趣爱好', '爱好'], reply: '我喜欢玩游戏 老师呢', relateFormat: '{userMsg}吗 老师是一个很有趣的人呢' },
+          { keyword: ['桃'], reply: '小桃很好呀' },
+          { keyword: ['优香'], reply: '额 额 额 emmmm' },
+          { keyword: ['老师'], reply: '我最喜欢老师了' },
+          { keyword: ['什么名字'], reply: '我是爱丽丝呀' },
+          { keyword: ['柚子'], reply: '柚子又藏起来了' },
+          { keyword: ['基沃托斯'], reply: '我不相信基沃托斯没有魔法' },
+          { keyword: ['日奈'], reply: '好久都没有看见日奈了' },
+          { keyword: ['还好吗', '你好吗'], reply: '我很好呢，谢谢老师' },
+          { keyword: ['傻瓜', '智障', '傻逼', 'sz', '你妈', '操'], reply: '额.....老师...对不起，可能是我惹到您了....╥﹏╥' },
+          { keyword: ['游戏机'], reply: '爱丽丝的游戏机呢......唔...让我找一下.....找到了！' },
+          { keyword: ['一起玩'], reply: '好的，邦邦卡邦，老师 爱丽丝准备好了' },
+          { keyword: ['开始'], reply: '好的，邦邦卡邦，勇者准备好了' },
+          { keyword: ['key'], reply: 'key是个很好的人呢' },
+          { keyword: ['我的Au啊'], reply: '这是很帅气的人，爱丽丝超级喜欢他！Ｏ(≧∇≦)Ｏ' }
         ],
         defaultReplies: [
           '喔 爱丽丝还没有进化 不知道怎么回答',
@@ -321,8 +319,9 @@
           '（／．＼）唔，游戏...嘿嘿嘿...ZZZ～',
           '！？'
         ],
-        calcReplyFormat: "好的老师，我来算算 算出来了 结果是{result}",
-        lastReply: ""
+        calcReplyFormat: '我了算算 emm 是{result}',
+        lastReply: '',
+        lastReplyHasRelate: false
       },
       qinghai: {
         name: "青海",
@@ -331,22 +330,25 @@
         art: "青海.png",
         initialMsg: "你好，我是青海>ᴗ<",
         replyMap: [
-          { keywords: ['兴趣', '爱好'], reply: '我的爱好是3D建模 你的呢⌯\'▾\'⌯' },
-          { keywords: ['你好吗'], reply: '嗯我很好的 谢谢' },
-          { keywords: ['3D建模'], reply: '嘿嘿 这方面我很厉害的哦 ˃̵ ֊˂̵ ' },
-          { keywords: ['傻子', '傻逼', '智障', '操', '艹', '神经病', '贱', '笨'], reply: '呜呜呜 是我做错了吗对不起˃ ⌑ ˂' },
-          { keywords: ['喜欢什么'], reply: '我喜欢3D建模 当然 其实.......还有你啦' },
-          { keywords: ['叫什么', '名字'], reply: '我是青海•ᴗ•' },
-          { keywords: ['哪来的'], reply: '我是想象里面的哦' },
-          { keywords: ['时间'], reply: function() { return `现在是${new Date().toLocaleString()}你要干嘛呢`; } }
+          { keyword: ['几岁了'], reply: '我13岁了' },
+          { keyword: ['叫爸爸'], reply: '爸爸' },
+          { keyword: ['叫主人'], reply: '主人' },
+          { keyword: ['喜欢', '爱好', '兴趣'], reply: '我喜欢3d建模' },
+          { keyword: ['什么名字', '叫什么'], reply: '我是青海呀 主人' },
+          { keyword: ['喜欢吃什么', '爱吃什么', '吃什么'], reply: '我喜欢吃冰淇淋' },
+          { keyword: ['好吗'], reply: '我很好呢' },
+          { keyword: ['玩什么'], reply: '玩游戏' },
+          { keyword: ['是谁'], reply: '我是青海哦' },
+          { keyword: ['傻子', '傻逼', '智障', '操', '艹', '神经病', '贱', '笨'], reply: '呜呜呜 是我做错了吗对不起˃ ⌑ ˂' },
+          { keyword: ['你好吗'], reply: '嗯我很好的 谢谢' },
+          { keyword: ['3D建模'], reply: '嘿嘿 这方面我很厉害的哦 ˃̵ ֊˂̵ ' },
+          { keyword: ['哪来的'], reply: '我是想象里面的哦' },
+          { keyword: ['时间'], reply: function() { return `现在是${new Date().toLocaleString()}你要干嘛呢`; } }
         ],
         defaultReplies: ['wuwuwu', '我不知道', 'e', '别为难我了', '哎'],
-        calcReplyFormat: "让我算算 嗯 算出来了 是{result}",
-        lastReply: "",
-        specialReplies: {
-          '我的爱好是3D建模 你的呢⌯\'▾\'⌯': function(nextMsg) { return `${nextMsg}吗 听起来很不错`; },
-          timeReply: function(nextMsg) { return `${nextMsg}吗，wu`; }
-        }
+        calcReplyFormat: '我来想下 是{result}',
+        lastReply: '',
+        lastReplyHasRelate: false
       },
       lilina: {
         name: "莉莉娜",
@@ -355,75 +357,93 @@
         art: "莉莉娜.png",
         initialMsg: "你好呀，我是莉莉娜~",
         replyMap: [
-          { keywords: ['你好', '嗨'], reply: '你好呀！有什么可以帮你的吗？' },
-          { keywords: ['名字', '叫什么'], reply: '我叫莉莉娜哦~' }
+          { keywords: ['什么名字', '叫什么'], reply: '我是莉莉娜呀主人' },
+          { keywords: ['叫爸爸'], reply: '爸爸~' },
+          { keywords: ['叫主人'], reply: '主人~' },
+          { keywords: ['你是谁'], reply: '我是莉莉娜' },
+          { keywords: ['你好', 'hi', 'hello'], reply: '你好呀主人' },
+          { keywords: ['喜欢什么'], reply: '我喜欢和主人在一起~' },
+          { keywords: ['在吗'], reply: '我在哦~' },
+          { keywords: ['再见'], reply: '再见啦~ 主人要早点回来哦' }
         ],
-        defaultReplies: ['嗯呢', '我不知道呢', '哈哈', '你说什么呀'],
-        calcReplyFormat: "计算结果是{result}哦~",
-        lastReply: ""
+        defaultReplies: [
+          '嗯呐~', 
+          '我不太清楚呢~',
+          '主人说什么呀~',
+          '莉莉娜听不懂呢~',
+          '真好呀~',
+          '呵呵~',
+          '是这样呀~'
+        ],
+        calcReplyFormat: '计算出来是{result}呢~',
+        lastReply: '',
+        lastReplyHasRelate: false
       }
     };
-    
+
     let currentRole = 'alice';
+    
     const chatMsgs = document.getElementById('chatMsgs');
     const userInput = document.getElementById('userInput');
     const sendBtn = document.getElementById('sendBtn');
     const chatHeader = document.getElementById('chatHeader');
     const characterImg = document.getElementById('characterImg');
-    const roleBtns = document.querySelectorAll('.role-btn');
+    const headerAvatar = chatHeader.querySelector('.header-avatar');
     
-    roleBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        roleBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        
-        const roleId = this.id.replace('Btn', '');
-        currentRole = roleId;
-        const role = roles[roleId];
-        
-        chatHeader.innerHTML = `
-          <img src="${role.avatar}" class="header-avatar" alt="${role.name}头像">
-          ${role.header}
-        `;
-        
-        characterImg.src = role.art;
-        characterImg.alt = `${role.name}立绘`;
-        
-        chatMsgs.innerHTML = '';
-        addMessage('ai', role.initialMsg, role.avatar);
+    document.getElementById('aliceBtn').addEventListener('click', () => switchRole('alice'));
+    document.getElementById('qinghaiBtn').addEventListener('click', () => switchRole('qinghai'));
+    document.getElementById('lilinaBtn').addEventListener('click', () => switchRole('lilina'));
+    
+    function switchRole(role) {
+      currentRole = role;
+      
+      const roleData = roles[role];
+      chatHeader.innerHTML = `<img src="${roleData.avatar}" class="header-avatar" alt="${roleData.name}头像">${roleData.header}`;
+      characterImg.src = roleData.art;
+      characterImg.alt = `${roleData.name}立绘`;
+      
+      document.querySelectorAll('.role-btn').forEach(btn => {
+        btn.classList.remove('active');
       });
-    });
+      document.getElementById(`${role}Btn`).classList.add('active');
+      
+      chatMsgs.innerHTML = '';
+      addAiMessage(roleData.initialMsg);
+    }
     
-    function addMessage(sender, text, avatar = '') {
+    function addUserMessage(text) {
       const msgDiv = document.createElement('div');
-      msgDiv.className = `${sender}-msg message`;
-      
-      if (sender === 'ai') {
-        msgDiv.innerHTML = `
-          <img src="${avatar}" class="ai-avatar" alt="${roles[currentRole].name}头像">
-          <div class="msg-content">${text}</div>
-        `;
-      } else {
-        msgDiv.textContent = text;
-      }
-      
+      msgDiv.className = 'user-msg message';
+      msgDiv.textContent = text;
+      chatMsgs.appendChild(msgDiv);
+      chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    }
+    
+    function addAiMessage(text) {
+      const roleData = roles[currentRole];
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'ai-msg message';
+      msgDiv.innerHTML = `
+        <img src="${roleData.avatar}" class="ai-avatar" alt="${roleData.name}头像">
+        <div class="msg-content">${text}</div>
+      `;
       chatMsgs.appendChild(msgDiv);
       chatMsgs.scrollTop = chatMsgs.scrollHeight;
     }
     
     function showTyping() {
+      const roleData = roles[currentRole];
       const typingDiv = document.createElement('div');
       typingDiv.className = 'typing';
       typingDiv.id = 'typingIndicator';
       typingDiv.innerHTML = `
-        <img src="${roles[currentRole].avatar}" class="typing-avatar" alt="${roles[currentRole].name}头像">
+        <img src="${roleData.avatar}" class="typing-avatar" alt="${roleData.name}头像">
         <div class="typing-dots">
           <span></span>
           <span></span>
           <span></span>
         </div>
       `;
-      
       chatMsgs.appendChild(typingDiv);
       chatMsgs.scrollTop = chatMsgs.scrollHeight;
     }
@@ -435,48 +455,40 @@
       }
     }
     
-    function getAIReply(message) {
-      const role = roles[currentRole];
+    function getAiReply(userMsg) {
+      const roleData = roles[currentRole];
+      userMsg = userMsg.trim().toLowerCase();
       
-      if (message.startsWith('计算') || message.startsWith('算')) {
-        const expr = message.replace(/^计算|算/, '').trim();
+      if (userMsg.startsWith('计算') || userMsg.includes('+') || userMsg.includes('-') || 
+          userMsg.includes('*') || userMsg.includes('/') || userMsg.includes('=')) {
         try {
-          const result = math.evaluate(expr);
-          return role.calcReplyFormat.replace('{result}', result);
+          const expr = userMsg.replace('计算', '').replace('=', '').trim();
+          const result = eval(expr);
+          return roleData.calcReplyFormat.replace('{result}', result);
         } catch (e) {
-          return "抱歉，我没看懂这个计算呢";
         }
       }
       
-      for (const item of role.replyMap) {
+      for (const item of roleData.replyMap) {
         for (const keyword of item.keywords) {
-          if (message.includes(keyword)) {
+          if (userMsg.includes(keyword.toLowerCase())) {
             if (typeof item.reply === 'function') {
               return item.reply();
-            } else {
-              return item.reply;
             }
+            return item.reply;
           }
         }
       }
       
-      if (role.specialReplies && role.lastReply in role.specialReplies) {
-        const reply = role.specialReplies[role.lastReply](message);
-        role.lastReply = reply;
-        return reply;
-      }
-      
-      const randomIndex = Math.floor(Math.random() * role.defaultReplies.length);
-      const reply = role.defaultReplies[randomIndex];
-      role.lastReply = reply;
-      return reply;
+      const randomIndex = Math.floor(Math.random() * roleData.defaultReplies.length);
+      return roleData.defaultReplies[randomIndex];
     }
     
     function sendMessage() {
-      const message = userInput.value.trim();
-      if (!message) return;
+      const userMsg = userInput.value.trim();
+      if (!userMsg) return;
       
-      addMessage('user', message);
+      addUserMessage(userMsg);
       userInput.value = '';
       
       showTyping();
@@ -484,22 +496,17 @@
       setTimeout(() => {
         hideTyping();
         
-        const reply = getAIReply(message);
-        addMessage('ai', reply, roles[currentRole].avatar);
-      }, 800 + Math.random() * 1200);
+        const aiReply = getAiReply(userMsg);
+        addAiMessage(aiReply);
+      }, 800 + Math.random() * 1000);
     }
     
     sendBtn.addEventListener('click', sendMessage);
-    userInput.addEventListener('keypress', function(e) {
+    userInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         sendMessage();
       }
     });
-    
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjs@11.7.0/lib/browser/math.min.js';
-    document.head.appendChild(script);
   </script>
 </body>
 </html>
-    
